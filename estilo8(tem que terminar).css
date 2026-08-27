@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef2f7;
+  color: #172033;
+}
+
+.dashboard {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header hesder"
+    "aside main"
+    "footer footer";
+}
+
+.dashboard > header {
+  grid-area: header;
+  padding: 20px;
+  background: #0f172a;
+  color: #fff;
+}
+
+.dashboard > aside {
+  grid-area: aside;
+  padding: 20px;
+  background: #1e293b;
+}
+
+.dashboard > aside a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+}
+
+.dashboard > main {
+  grid-area: main;
+  padding: 24px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3,
